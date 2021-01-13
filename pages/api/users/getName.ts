@@ -35,10 +35,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         leftSide: isEnglishVowel[5].toLowerCase(),
         rightSide: isEnglishVowel[2].toLowerCase(),
       },
-      combined: {
-        bLeR: isVowel[5].toLowerCase() + isEnglishVowel[2].toLowerCase(),
-        eRbL: isEnglishVowel[5].toLowerCase() + isVowel[2].toLowerCase(),
-      },
+      combined: [
+        isVowel[5].toLowerCase() + isEnglishVowel[2].toLowerCase(),
+        isEnglishVowel[5].toLowerCase() + isVowel[2].toLowerCase(),
+    ],
     });
   } catch (err) {
     res.status(500).json({ statusCode: 500, message: err.message });

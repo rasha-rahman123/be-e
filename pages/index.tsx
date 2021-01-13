@@ -17,9 +17,9 @@ const IndexPage = () => {
   const fetchFunction = async () => {
     const d : String[] = await fetchName()
     //@ts-ignore
-    setName(await d.bLeR)
+    setName(d[0])
     //@ts-ignore
-    setName1(await d.eRbL)
+    setName1(d[1])
   }
 
   return (
